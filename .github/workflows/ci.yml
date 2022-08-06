@@ -27,6 +27,8 @@ jobs:
     - name: npm test
       run: |
         npm test
+    - id: commit
+      uses: pr-mpt/actions-commit-hash@v1
     - name: commit id
       env:
         COMMIT_ID: ${{ steps.commit.outputs.short }}
