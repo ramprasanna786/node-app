@@ -32,7 +32,7 @@ jobs:
     - name: commit id
       env:
         COMMIT_ID: ${{ steps.commit.outputs.short }}
-        USER_NAME: ${{ secret.USER_NAME }}
+        USER_NAME: ${{ secrets.USER_NAME }}
       run: |
         echo $COMMIT_ID
         echo user name $USER_NAME
