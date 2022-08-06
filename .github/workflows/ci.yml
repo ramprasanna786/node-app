@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [16.x]
     
     steps:
     - uses: actions/checkout@v1
@@ -32,7 +32,7 @@ jobs:
     - name: commit id
       env:
         COMMIT_ID: ${{ steps.commit.outputs.short }}
-        USER_NAME: ${{ secrets.DEV.USER_NAME }}
+        USER_NAME: ${{ secrets.USER_NAME }}
       run: |
         echo $COMMIT_ID
-        echo user name $USER_NAME
+        echo $USER_NAME
