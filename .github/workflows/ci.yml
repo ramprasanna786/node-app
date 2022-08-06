@@ -31,4 +31,4 @@ jobs:
       env:
         COMMIT_ID: ${{ steps.commit.outputs.short }}
       run: |
-        echo ${COMMIT_ID}
+        echo $COMMIT_ID
